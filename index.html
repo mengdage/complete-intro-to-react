@@ -13,17 +13,17 @@
   <script src="node_modules/react-dom/dist/react-dom.js"></script>
 
   <script>
-    const MyTitle = () => (
+    const MyTitle = (props) => (
       React.createElement('div', null,
-        React.createElement('h1', null, 'This is my Second Component.')
+        React.createElement('h1', {style: {color: props.color}}, props.title)
       )
     );
     const MyFirstComponent = () => (
-      React.createElement('div', null,
-        React.createElement(MyTitle),
-        React.createElement(MyTitle),
-        React.createElement(MyTitle),
-        React.createElement(MyTitle)
+      React.createElement('div', {id: 'my-first-component'},
+        React.createElement(MyTitle, {title: 'Game of Thrones', color: 'YellowGreen'}),
+        React.createElement(MyTitle, {title: 'Stranger Things', color: 'GreenYellow'}),
+        React.createElement(MyTitle, {title: 'Rick and Morty', color: '#123'}),
+        React.createElement(MyTitle, {title: 'Silicon Valley', color: 'rgb(255, 0, 0)'})
       )
     );
 
