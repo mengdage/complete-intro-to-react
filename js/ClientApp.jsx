@@ -1,3 +1,6 @@
+import React from 'react';
+import { render } from 'react-dom';
+
 const MyTitle = props =>
   React.createElement('div', null, React.createElement('h1', { style: { color: props.color } }, props.title));
 const MyFirstComponent = () =>
@@ -19,4 +22,4 @@ const MyFirstComponent = () =>
     })
   );
 
-ReactDOM.render(React.createElement(MyFirstComponent), document.getElementById('app'));
+render(React.createElement(MyFirstComponent), document.getElementById('app'));
