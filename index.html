@@ -13,9 +13,17 @@
   <script src="node_modules/react-dom/dist/react-dom.js"></script>
 
   <script>
+    const MyTitle = () => (
+      React.createElement('div', null,
+        React.createElement('h1', null, 'This is my Second Component.')
+      )
+    );
     const MyFirstComponent = () => (
       React.createElement('div', null,
-        React.createElement('h1', null, 'This is my First Component')
+        React.createElement(MyTitle),
+        React.createElement(MyTitle),
+        React.createElement(MyTitle),
+        React.createElement(MyTitle)
       )
     );
 
