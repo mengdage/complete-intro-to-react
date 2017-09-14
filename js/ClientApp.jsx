@@ -8,7 +8,7 @@ const MyFirstComponent = () =>
     'div',
     { id: 'my-first-component' },
     React.createElement(MyTitle, {
-      title: 'Game of Thrones',
+      title: 'Game of Thrones 3',
       color: 'YellowGreen'
     }),
     React.createElement(MyTitle, {
