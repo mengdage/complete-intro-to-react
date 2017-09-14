@@ -1,15 +1,17 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import { render } from 'react-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Landing from './Landing';
+import Search from './Search';
 
 const App = () => (
-  <div className="app">
-    <div className="landing">
-      <h1>Video</h1>
-      <input type="text" placeholder="Search..." />
-      <a>or Browser All</a>
+  <BrowserRouter>
+    <div className="app">
+      <Route exact path="/" component={Landing} />
+      <Route exact path="/search" component={Search} />
     </div>
-  </div>
+  </BrowserRouter>
 );
 
 App.propTypes = {};

@@ -7,11 +7,18 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
+  devServer: {
+    publicPath: '/dist/',
+    historyApiFallback: true
+  },
   devtool: 'cheap-eval-source-map',
   stats: {
     colors: true,
     reasons: true,
     chunks: true
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json']
   },
   module: {
     rules: [
