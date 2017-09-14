@@ -1,25 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { render } from 'react-dom';
 
-const MyTitle = props => (
-  <div>
-    <h1 style={{ color: props.color }}>{props.title}</h1>
+const App = () => (
+  <div className="app">
+    <div className="landing">
+      <h1>Video</h1>
+      <input type="text" placeholder="Search..." />
+      <a>or Browser All</a>
+    </div>
   </div>
 );
 
-MyTitle.propTypes = {
-  title: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired
-};
+App.propTypes = {};
 
-const MyFirstComponent = () => (
-  <div id="my-first-component">
-    <MyTitle title="Game of Thrones" color="YellowGreen" />
-    <MyTitle title="Stranger Things" color="GreenYellow" />
-    <MyTitle title="Rick and Morty" color="#123" />
-    <MyTitle title="Silicon Valley" color="rgb(255, 0,0 )" />
-  </div>
-);
-
-render(React.createElement(MyFirstComponent), document.getElementById('app'));
+render(<App />, document.getElementById('app'));
